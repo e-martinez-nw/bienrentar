@@ -1,7 +1,22 @@
 <?php get_header(); ?>
-	<div class="slider">
-		<?php putRevSlider("index") ?>
+	<?php if(is_active_sidebar('cta-slider')): ?>
+		<div class="hidden-xs col-sm-5 col-sm-offset-5 col-md-4 col-md-offset-6">
+			<div class="cta-slider">
+				<?php dynamic_sidebar( 'cta-slider' ); ?>
+			</div><!--.features-->
+		</div><!--.col-sm-3-->
+	<?php endif; ?>
+	<div id="slider">
+		<?php nivo_slider( "index" ); ?>
 	</div><!--slider-->
+
+	<?php if(is_active_sidebar('cta-slider')): ?>
+		<div class="visible-xs">
+			<div class="cta-slider2 col-xs-12">
+				<?php dynamic_sidebar( 'cta-slider' ); ?>
+			</div><!--.col-sm-3-->
+		</div><!--.features-->
+	<?php endif; ?>
 
 	<section id="icons">
 		<div class="container">
@@ -16,16 +31,18 @@
 	</section><!--.icons-->
 
 	<section id="beneficios">
+		<div class="container-fluid hidden-xs no-padding">
+			<?php if(is_active_sidebar('beneficios-img')): ?>
+				<div class="col-sm-offset-6">
+					<?php dynamic_sidebar( 'beneficios-img' ); ?>
+				</div><!--.col-sm-6 col-sm-offset-6-->
+			<?php endif; ?>
+		</div><!--.container-fluid-->
 		<div class="container">
 			<div class="row">
 				<?php if(is_active_sidebar('beneficios')): ?>
-					<div class="col-sm-6">
-						<?php dynamic_sidebar( 'beneficios' ); ?>
-					</div><!--.col-sm-6-->
-				<?php endif; ?>
-				<?php if(is_active_sidebar('beneficios-img')): ?>
-					<div class="col-sm-6">
-						<?php dynamic_sidebar( 'beneficios-img' ); ?>
+					<div class="col-sm-6 text">
+							<?php dynamic_sidebar( 'beneficios' ); ?>
 					</div><!--.col-sm-6-->
 				<?php endif; ?>
 			</div><!--.row-->
@@ -39,7 +56,7 @@
 					<?php dynamic_sidebar( 'contacto' ); ?>
 				</div><!--.col-sm-4-->
 				<div class="col-sm-8">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3762.4636650119787!2d-99.20045320000001!3d19.4355661!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d2020350d36a7d%3A0x2387503a2889b3d!2sGoldsmith+232%2C+Polanco%2C+11550+Ciudad+de+M%C3%A9xico%2C+D.F.!5e0!3m2!1ses-419!2smx!4v1431120371421" width="100%" height="544" frameborder="0" style="border:0"></iframe>
+					<?php dynamic_sidebar(' mapa' ); ?>
 				</div><!--.col.sm-8-->
 			</div><!--.row-->
 		</div><!--.container-->

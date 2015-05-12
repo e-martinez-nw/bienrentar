@@ -80,6 +80,16 @@ function nw_register_sidebars() {
 	// DOCS: http://codex.wordpress.org/Function_Reference/dynamic_sidebar
 
 	register_sidebar(array(
+		'id' => 'cta-slider', // Change the id
+		'name' => 'Slider - CTA', // Change the name
+		'description' => 'The first (primary) sidebar.',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
+
+	register_sidebar(array(
 		'id' => 'features', // Change the id
 		'name' => 'Features', // Change the name
 		'description' => 'The first (primary) sidebar.',
@@ -112,6 +122,16 @@ function nw_register_sidebars() {
 	register_sidebar(array(
 		'id' => 'contacto', // Change the id
 		'name' => 'Contacto', // Change the name
+		'description' => 'The first (primary) sidebar.', // Better change description too!
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
+
+	register_sidebar(array(
+		'id' => 'mapa', // Change the id
+		'name' => 'Mapa', // Change the name
 		'description' => 'The first (primary) sidebar.', // Better change description too!
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',

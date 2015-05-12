@@ -11,7 +11,7 @@
 	
 	<meta name="author" content="The NuevaWeb Team">
 	<title><?php bloginfo('name'); ?> | <?php is_home() ? bloginfo('description') : wp_title(''); ?></title>
-
+	<meta name="viewport" content="width=device-width">
 	<?php //This is my custom stylesheet ?>
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/style.css">
 	<?php // icons & favicons ?>
@@ -48,26 +48,26 @@
 	<header id="main-header">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-3">
-					<a href="#" class="logo">
-						<img src="<?php bloginfo('template_url'); ?>/img/index/logo.png">
-					</a>
-				</div><!--col-sm-3-->
 				<nav class="navbar" role="navigation">
-						<div class="navbar-header">
-					      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
-					        <span class="sr-only">Toggle navigation</span>
-					        <span class="icon-bar"></span>
-					        <span class="icon-bar"></span>
-					        <span class="icon-bar"></span>
-					      </button>
-					      <a class="navbar-brand" href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>">
-					      	<h1 class="none"><?php bloginfo('name'); ?></h1>
-					      </a>
-					    </div>
+					<div class="col-xs-3">
+						<a href="<?php bloginfo('url') ?>" class="logo">
+							<img src="<?php bloginfo('template_url'); ?>/img/index/logo.png">
+						</a>
+					</div><!--col-sm-3-->
+					<div class="navbar-header">
+				      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				      </button>
+				      <a class="navbar-brand" href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>">
+				      	<h1 class="none"><?php bloginfo('name'); ?></h1>
+				      </a>
+				    </div><!--navbar-header-->
 
 						<?php nw_main_nav(); ?>
-						
+
 				</nav><!-- /navbar -->
 			</div><!--row-->
 		</div><!--.container-->

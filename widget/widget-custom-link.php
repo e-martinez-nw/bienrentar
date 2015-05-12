@@ -15,7 +15,7 @@
  * Add function to widgets_init that'll load our widget.
  * @since 0.1
  */
-add_action( 'widgets_init', 'widget_custom_link' );
+add_action( 'widgets_init', 'widget_custom_link_text' );
 
 /**
  * Register our widget.
@@ -23,8 +23,8 @@ add_action( 'widgets_init', 'widget_custom_link' );
  *
  * @since 0.1
  */
-function widget_custom_link() {
-	register_widget( 'Custom_Link' );
+function widget_custom_link_text() {
+	register_widget( 'Custom_Link_Text' );
 }
 
 /**
@@ -34,15 +34,15 @@ function widget_custom_link() {
  *
  * @since 0.1
  */
-class Custom_Link extends WP_Widget {
+class Custom_Link_Text extends WP_Widget {
 
 	/**
 	 * Widget setup.
 	 */
-	function Custom_Link() {
+	function Custom_Link_Text() {
 		/* Widget settings. */
 		$widget_ops = array( 
-			'classname' => 'CustomLink', 
+			'classname' => 'CustomLink_Text', 
 			'description' => __('Agrega un link con url, imágen, ícono de FontAwesome y/o texto.', 'CustomLink') 
 			);
 
@@ -54,7 +54,7 @@ class Custom_Link extends WP_Widget {
 		 	);
 
 		/* Create the widget. */
-		$this->WP_Widget( 'custom-link', __('Custom Link', 'CustomLink'), $widget_ops, $control_ops );
+		$this->WP_Widget( 'custom-link-text', __('Custom Link Text', 'CustomLinkText'), $widget_ops, $control_ops );
 	}
 
 	/**
@@ -67,13 +67,14 @@ class Custom_Link extends WP_Widget {
 		$title = apply_filters('title', $instance['title'] );
 		$link_title = $instance['link_title'];
 		$url = $instance['url'];
+		$url = $instance['url'];
 		$icon = $instance['icon'];
 		$image_url = $instance['image_url'];
 		$custom_class = $instance['custom_class'];
 		$info = $instance['info'];
 	?>
 
-	<div class="widget-custom-link <?php echo $custom_class ? $custom_class : ''; ?>">
+	<div class="widget-custom-link-text <?php echo $custom_class ? $custom_class : ''; ?>">
 		<?php echo $url ? '<a href="'.$url.'">':''; ?>
 
 			<?php if($icon): ?>
@@ -84,9 +85,10 @@ class Custom_Link extends WP_Widget {
 
 			<?php if($image_url): ?>
 				<div class="widget-custom-link-image">
-					<img src="<?php bloginfo('template_url'); ?>/img/index/pixel.png" style="background-image: url(' <?php echo $image_url; ?> ');" title="<?php echo $text; ?>" alt="<?php echo $text; ?>" ?>
+					<img src="<?php echo $image_url; ?>" title="<?php echo $text; ?>" alt="<?php echo $text; ?>" ?>
 				</div><!-- end .widget-custom-link-image -->
 			<?php endif; ?>
+
 			<?php if($link_title): ?>
 				<div class="widget-custom-link-title">
 					<p><?php echo $link_title; ?></p>
@@ -98,6 +100,7 @@ class Custom_Link extends WP_Widget {
 					<p><?php echo $info; ?></p>
 				</div><!--.widge-custom-link-info-->
 			<?php endif; ?>
+
 
 		<?php echo $url ? '</a>':''; ?>			
 	</div>
