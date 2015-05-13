@@ -4,6 +4,7 @@
 					<div class="col-sm-5">
 						<?php nw_footer_main_nav(); ?>
 					</div><!--.col-sm-6-->
+					<div class="clearfix visible-xs"></div><!--.clearfic-->
 					<div class="col-sm-7 legales">
 						<p>&#169; BIENRENTAR 2015 Todos los Derechos Reservados. Sitio web desarrollado por <a href="#">NuevaWeb</a></p>
 					</div><!--.legales-->
