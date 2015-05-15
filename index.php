@@ -1,11 +1,5 @@
 <?php get_header(); ?>
-	<?php if(is_active_sidebar('cta-slider')): ?>
-		<div class="hidden-xs col-sm-5 col-sm-offset-7 col-md-4 col-md-offset-8">
-			<div class="cta-slider">
-				<?php dynamic_sidebar( 'cta-slider' ); ?>
-			</div><!--.features-->
-		</div><!--.col-sm-3-->
-	<?php endif; ?>
+	
 	<div id="slider">
 		<?php nivo_slider( "index" ); ?>
 	</div><!--slider-->

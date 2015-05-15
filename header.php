@@ -46,6 +46,17 @@
 	?>
 
 	<header id="main-header">
+	    <?php if(is_active_sidebar('cta-slider')): ?>
+			<div class="cta-slider">
+				<div class="container">
+					<div class="row">
+						<div class="hidden-xs col-sm-12">
+							<?php dynamic_sidebar( 'cta-slider' ); ?>
+						</div><!--.hidden-xs col-sm-12-->
+					</div><!--.row-->
+				</div><!--.container-->					
+			</div><!--.cta-slider-->
+		<?php endif; ?>
 		<div class="container">
 			<div class="row">
 				<nav class="navbar" role="navigation">
@@ -66,7 +77,8 @@
 				      </a>
 				    </div><!--navbar-header-->
 
-						<?php nw_main_nav(); ?>
+
+					<?php nw_main_nav(); ?>
 
 				</nav><!-- /navbar -->
 			</div><!--row-->
