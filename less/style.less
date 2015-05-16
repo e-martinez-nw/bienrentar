@@ -67,6 +67,7 @@ Happy Developing!
 @dark-gold:					#9a7a22;
 @gray:						#333;
 @light-gray:				#707070;
+@brown:						#2d1600;
 
 
 // ====================================
@@ -235,7 +236,7 @@ blockquote{
 	width: 100%;
 	text-align: right;
 	display: inline-block;
-	background: @gold;
+	background: @brown;
 	color: @white;
 
 	.widget-custom-link {
@@ -247,7 +248,10 @@ blockquote{
 			font-size: 1.4em;
 		}
 
-		.widget-custom-link-info p {margin: 5px 0;}
+		.widget-custom-link-info p {
+			margin: 5px 0;
+			font-family: 'OpenSans';
+		}
 	}
 }
 
@@ -262,7 +266,7 @@ blockquote{
   	z-index: 20;
   	right: 80px;
   	top: 50px;
-  	background-color: @gold;
+  	background-color: @brown;
   	border-radius: 2px;
   	max-width: none;
 
@@ -326,87 +330,83 @@ blockquote{
 #icons {
 	.white;
 
-	.features {
+	.widget-custom-link {
+		padding-bottom: 10px;
 
-		.widget-custom-link {
-			padding-bottom: 10px;
+		a {
+			text-decoration: none;
+			color: @gray;
+			display: inline-block;
+			padding: 50px 0;
+			.transition;
+
+			&:after {
+				content: "Ver más";
+				color: #ffffff;
+				display: inline-block;
+				text-align: center;
+				padding: 5px 10px;
+				background-color: @light-gray;
+				border-radius: 8px;
+				transition: .2s;
+				position: absolute;
+				left: 53%;
+			}//&:after
+
+
+
+			.widget-custom-link-image {
+				float: left;
+				padding: 50px 30px 50px 0;
+
+				img {
+					width: 55px;
+					height: 55px;
+					.transition;
+				}//img
+			}//.widget-custom-link-image
+
+			.widget-custom-link-title {
+				text-align: center;
+				font-family: 'DellaRespira';
+					font-size: 14px;
+					text-transform: uppercase;
+
+			}//.widget-custom-link-title
+
+			.widget-custom-link-info {
+				text-align: justify;
+				padding: 0 15px;
+			}//.widget-custom-link-info
+		}//a
+		
+		&:hover {
+			background-color: @light-gray;
+			.transition;
 
 			a {
 				text-decoration: none;
-				color: @gray;
-				display: inline-block;
-				padding: 50px 0;
+				color: @white;
 				.transition;
-
+				
 				&:after {
-					content: "Ver más";
-					color: #ffffff;
-					display: inline-block;
-					text-align: center;
-					padding: 5px 10px;
-					background-color: @light-gray;
-					border-radius: 8px;
-					transition: .2s;
-					position: absolute;
-					left: 53%;
+					background-color: @white;
+					color: @light-gray;
 				}//&:after
+			}
 
+			.widget-custom-link-image img {background-position: 55px 0px; .transition}
 
-
-				.widget-custom-link-image {
-					float: left;
-					padding: 50px 30px 50px 0;
-
-					img {
-						width: 55px;
-						height: 55px;
-						.transition;
-					}//img
-				}//.widget-custom-link-image
-
-				.widget-custom-link-title {
-					text-align: center;
-					font-family: 'DellaRespira';
-  					font-size: 14px;
-  					text-transform: uppercase;
-
-				}//.widget-custom-link-title
-
-				.widget-custom-link-info {
-					text-align: justify;
-					padding: 0 15px;
-				}//.widget-custom-link-info
-			}//a
-			
-			&:hover {
-				background-color: @light-gray;
-				.transition;
-
-				a {
-					text-decoration: none;
-					color: @white;
-					.transition;
-					
-					&:after {
-						background-color: @white;
-						color: @light-gray;
-					}//&:after
-				}
-
-				.widget-custom-link-image img {background-position: 55px 0px; .transition}
-
-			}//&:hover
-		}//.widget-custom-link
-	}//.features
+		}//&:hover
+	}//.widget-custom-link
 }//#icons
 
 // Beneficios
 // ====================================
 
 #beneficios{
-	background-color: @gold;
+	background-color: @brown;
 	color: @white;
-	padding: 50px 0;
 	overflow: hidden;
 	position: relative;
 
@@ -419,19 +419,19 @@ blockquote{
 		min-width: 70%;
 		height: auto;
 		min-height: 100%;
-		margin-top: -50px;
+		content: "";
 	}//img
 
 	.text {
-		padding: 0 40px 0 10px; 
+		padding: 50px 40px; 
 		text-align: center;
 
 		.widget_text {
-			text-align: left;
+			text-align: justify;
 
 			.textwidget p:before {
-				content: " ";
-				font-family: fontawesome;
+				content: "\f015";
+				font-family: 'fontawesome';
 				padding-right: 10px;
 				font-size: 18px;
 				float: left;
@@ -581,16 +581,23 @@ iframe {
 #main-content {
 	.white;
 	padding-bottom: 40px;
+	line-height: 2em;
 
-	h1 {
-		color: @gold;
-		text-align: center;
+	header {
+		padding: 40px 0;
+		
+		h1 {
+			color: @gold;
+			text-align: center;
+		}
 	}
+
 
 	p, li {font-size: 16px;}
 
 	ul li {
 		list-style: none;
+		position: relative;
 
 		&:before {
 			content: "\2022";
@@ -599,7 +606,20 @@ iframe {
 			margin-right: 10px;
 			line-height: 0.6em;
 			vertical-align: top;
+			position: absolute;
+  			left: -20px;
+  			top: 4px;
 		}
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+
+	img.ajax-loader {
+		width: auto !important;
+		height: auto !important;
 	}
 }
 

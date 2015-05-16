@@ -5,20 +5,20 @@
 	</div><!--slider-->
 
 	<?php if(is_active_sidebar('cta-slider')): ?>
-		<div class="visible-xs">
-			<div class="cta-slider2 col-xs-12">
-				<?php dynamic_sidebar( 'cta-slider' ); ?>
-			</div><!--.col-sm-3-->
-		</div><!--.features-->
+		<div class="container visible-xs">
+			<div class="row">
+				<div class="cta-slider2 col-xs-12">
+					<?php dynamic_sidebar( 'cta-slider' ); ?>
+				</div><!--.col-sm-3-->
+			</div><!--.row-->
+		</div><!--.container visible-xs-->
 	<?php endif; ?>
 
 	<section id="icons">
 		<div class="container">
 			<div class="row">
 				<?php if(is_active_sidebar('features')): ?>
-					<div class="features">
 						<?php dynamic_sidebar( 'features' ); ?>
-					</div><!--.features-->
 				<?php endif; ?>
 			</div><!--.row-->
 		</div><!--.container-->

@@ -6172,7 +6172,7 @@ blockquote {
   width: 100%;
   text-align: right;
   display: inline-block;
-  background: #ba993b;
+  background: #2d1600;
   color: #ffffff;
 }
 .cta-slider .widget-custom-link {
@@ -6185,6 +6185,7 @@ blockquote {
 }
 .cta-slider .widget-custom-link .widget-custom-link-info p {
   margin: 5px 0;
+  font-family: 'OpenSans';
 }
 .cta-slider2 {
   padding: 20px 5px 15px;
@@ -6193,7 +6194,7 @@ blockquote {
   z-index: 20;
   right: 80px;
   top: 50px;
-  background-color: #ba993b;
+  background-color: #2d1600;
   border-radius: 2px;
   max-width: none;
 }
@@ -6252,17 +6253,17 @@ blockquote {
 #icons {
   background-color: #ffffff;
 }
-#icons .features .widget-custom-link {
+#icons .widget-custom-link {
   padding-bottom: 10px;
 }
-#icons .features .widget-custom-link a {
+#icons .widget-custom-link a {
   text-decoration: none;
   color: #333333;
   display: inline-block;
   padding: 50px 0;
   transition: .2s;
 }
-#icons .features .widget-custom-link a:after {
+#icons .widget-custom-link a:after {
   content: "Ver más";
   color: #ffffff;
   display: inline-block;
@@ -6274,46 +6275,45 @@ blockquote {
   position: absolute;
   left: 53%;
 }
-#icons .features .widget-custom-link a .widget-custom-link-image {
+#icons .widget-custom-link a .widget-custom-link-image {
   float: left;
   padding: 50px 30px 50px 0;
 }
-#icons .features .widget-custom-link a .widget-custom-link-image img {
+#icons .widget-custom-link a .widget-custom-link-image img {
   width: 55px;
   height: 55px;
   transition: .2s;
 }
-#icons .features .widget-custom-link a .widget-custom-link-title {
+#icons .widget-custom-link a .widget-custom-link-title {
   text-align: center;
   font-family: 'DellaRespira';
   font-size: 14px;
   text-transform: uppercase;
 }
-#icons .features .widget-custom-link a .widget-custom-link-info {
+#icons .widget-custom-link a .widget-custom-link-info {
   text-align: justify;
   padding: 0 15px;
 }
-#icons .features .widget-custom-link:hover {
+#icons .widget-custom-link:hover {
   background-color: #707070;
   transition: .2s;
 }
-#icons .features .widget-custom-link:hover a {
+#icons .widget-custom-link:hover a {
   text-decoration: none;
   color: #ffffff;
   transition: .2s;
 }
-#icons .features .widget-custom-link:hover a:after {
+#icons .widget-custom-link:hover a:after {
   background-color: #ffffff;
   color: #707070;
 }
-#icons .features .widget-custom-link:hover .widget-custom-link-image img {
+#icons .widget-custom-link:hover .widget-custom-link-image img {
   background-position: 55px 0px;
   transition: .2s;
 }
 #beneficios {
-  background-color: #ba993b;
+  background-color: #2d1600;
   color: #ffffff;
-  padding: 50px 0;
   overflow: hidden;
   position: relative;
 }
@@ -6326,18 +6326,18 @@ blockquote {
   min-width: 70%;
   height: auto;
   min-height: 100%;
-  margin-top: -50px;
+  content: "";
 }
 #beneficios .text {
-  padding: 0 40px 0 10px;
+  padding: 50px 40px;
   text-align: center;
 }
 #beneficios .text .widget_text {
-  text-align: left;
+  text-align: justify;
 }
 #beneficios .text .widget_text .textwidget p:before {
-  content: " ";
-  font-family: fontawesome;
+  content: "\f015";
+  font-family: 'fontawesome';
   padding-right: 10px;
   font-size: 18px;
   float: left;
@@ -6449,8 +6449,12 @@ iframe {
 #main-content {
   background-color: #ffffff;
   padding-bottom: 40px;
+  line-height: 2em;
 }
-#main-content h1 {
+#main-content header {
+  padding: 40px 0;
+}
+#main-content header h1 {
   color: #ba993b;
   text-align: center;
 }
@@ -6460,6 +6464,7 @@ iframe {
 }
 #main-content ul li {
   list-style: none;
+  position: relative;
 }
 #main-content ul li:before {
   content: "\2022";
@@ -6468,6 +6473,17 @@ iframe {
   margin-right: 10px;
   line-height: 0.6em;
   vertical-align: top;
+  position: absolute;
+  left: -20px;
+  top: 4px;
+}
+#main-content img {
+  width: 100%;
+  height: auto;
+}
+#main-content img.ajax-loader {
+  width: auto !important;
+  height: auto !important;
 }
 #searchform ::-webkit-input-placeholder {
   color: #b3b3b3;
