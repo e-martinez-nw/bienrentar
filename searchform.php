@@ -4,7 +4,7 @@
 		<input type="text" value="<?php get_search_query(); ?>" name="s" id="s" placeholder="¿Qué estás buscando?" />
 		<label class="search-btn">
 			<input type="submit" id="searchsubmit" value="<?php esc_attr_x( 'Search', 'submit button' ); ?>" />
-			<i class="fa fa-search"></i>
+			<i class="fa fa-search"> Buscar</i>
 		</label>
 	</div>
 </form>

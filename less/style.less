@@ -624,6 +624,71 @@ iframe {
 }
 
 
+//	404
+// ====================================
+#page404 {
+	.white;
+	background-image: url('../img/background/404.jpg');
+	background-size: cover;
+	background-position: center;
+	padding: 50px 0;
+	min-height: 500px;
+
+	h1 {
+		margin: 0;
+	}
+	+
+	h3 {padding: 20px 0;}
+}
+#searchform {
+	padding: 20px 0;
+	input[type="text"] {width: 40%;}
+
+	#searchsubmit {
+		position: absolute;
+		top: -4px;
+		left: -4px;
+	}
+
+	.search-btn {
+		position: relative;
+		margin-left: 10px;
+		padding-left: 5px;
+	}
+
+	i.fa.fa-search {color: @white;} 
+
+}
+
+
+
+//	Search
+// ====================================
+#search {
+	.white;
+
+	header {
+		background-color: @gold;
+		text-align: center;
+		color: white;
+		padding: 10px 0;
+		margin: 15px 80px 15px 0;
+
+		h3 {
+			margin: 0;
+
+			a {
+				color: @white;
+			}
+		}
+	}
+
+	section {
+		text-align: justify;
+	}
+}
+
+
 //	Components
 // ====================================
 
@@ -653,8 +718,9 @@ iframe {
 @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { 
 	#icons .features .widget-custom-link a {
 	 	.widget-custom-link-image {padding: 50px 20px 20px 0; }
-
 	}
+
+	#main-nav {position: inherit;}
 
 }// Small devices only
 

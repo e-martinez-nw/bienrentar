@@ -6485,6 +6485,58 @@ iframe {
   width: auto !important;
   height: auto !important;
 }
+#page404 {
+  background-color: #ffffff;
+  background-image: url('../img/background/404.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 50px 0;
+  min-height: 500px;
+}
+#page404 h1 {
+  margin: 0;
+}
+#page404 + h3 {
+  padding: 20px 0;
+}
+#searchform {
+  padding: 20px 0;
+}
+#searchform input[type="text"] {
+  width: 40%;
+}
+#searchform #searchsubmit {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+}
+#searchform .search-btn {
+  position: relative;
+  margin-left: 10px;
+  padding-left: 5px;
+}
+#searchform i.fa.fa-search {
+  color: #ffffff;
+}
+#search {
+  background-color: #ffffff;
+}
+#search header {
+  background-color: #ba993b;
+  text-align: center;
+  color: white;
+  padding: 10px 0;
+  margin: 15px 80px 15px 0;
+}
+#search header h3 {
+  margin: 0;
+}
+#search header h3 a {
+  color: #ffffff;
+}
+#search section {
+  text-align: justify;
+}
 #searchform ::-webkit-input-placeholder {
   color: #b3b3b3;
 }
@@ -6504,6 +6556,9 @@ iframe {
 @media (min-width: 768px) and (max-width: 991px) {
   #icons .features .widget-custom-link a .widget-custom-link-image {
     padding: 50px 20px 20px 0;
+  }
+  #main-nav {
+    position: inherit;
   }
 }
 /* Small devices and up (tablets, 768px and up) */
