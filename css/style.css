@@ -5992,7 +5992,7 @@ body {
   font-family: "OpenSans", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #333333;
+  background-color: #000000;
 }
 h1,
 h2,
@@ -6092,13 +6092,14 @@ blockquote {
   transition: .2s;
 }
 #main-nav ul li a:hover {
-  color: #ba993b;
-  border: 1px solid #ba993b;
+  color: #ffffff;
+  background-color: #000000;
+  border: 1px solid #000000;
   border-radius: 3px 3px 0 0;
   transition: .2s;
 }
 #main-nav ul li:nth-last-child(1) {
-  background-color: #ba993b;
+  background-color: #000000;
   border-radius: 3px 3px 0 0;
   transition: .2s;
 }
@@ -6110,8 +6111,8 @@ blockquote {
   transition: .2s;
 }
 #main-nav .current_page_item a {
-  border: 1px solid #ba993b !important;
-  border-left: 3px solid #ba993b !important;
+  border: 1px solid #000000 !important;
+  border-left: 3px solid #000000 !important;
   border-bottom: 1px solid #ba993b !important;
   border-radius: 3px 3px 0 0 !important;
   margin-bottom: 2px !important;
@@ -6312,7 +6313,7 @@ blockquote {
   transition: .2s;
 }
 #beneficios {
-  background-color: #2d1600;
+  background-color: #000000;
   color: #ffffff;
   overflow: hidden;
   position: relative;
@@ -6417,7 +6418,7 @@ iframe {
   display: none;
 }
 #main-footer {
-  background-color: #333333;
+  background-color: #000000;
   display: table;
   width: 100%;
 }
@@ -6431,12 +6432,14 @@ iframe {
   margin: 0;
 }
 #main-footer ul li a {
+  font-size: 12px;
   padding: 5px 10px;
   color: white;
   display: inline-block;
   text-decoration: underline;
 }
 #main-footer .legales p {
+  font-size: 12px;
   margin: 5px 0;
   color: #ffffff;
   text-align: right;
@@ -6520,6 +6523,7 @@ iframe {
 }
 #search {
   background-color: #ffffff;
+  padding: 50px 0;
 }
 #search header {
   background-color: #ba993b;

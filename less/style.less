@@ -80,7 +80,7 @@ body{
 	font-family: @primaryFontFamily;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	background-color: @gray;
+	background-color: @black;
 }
 
 h1, h2, h3, h4, h5, h6{ font-family: 'DellaRespira'; }
@@ -190,15 +190,16 @@ blockquote{
 				.transition;
 
 				&:hover {
-					color: @gold;
-					border: 1px solid @gold;
+					color: @white;
+					background-color: @black;
+					border: 1px solid @black;
 					border-radius: 3px 3px 0 0;
 					.transition;
 				}
 			}
 
 			&:nth-last-child(1) {
-				background-color: @gold;
+				background-color: @black;
 				border-radius: 3px 3px 0 0;
 				.transition;
 
@@ -215,9 +216,9 @@ blockquote{
 	}//ul
 
 	.current_page_item a {
-		border: 1px solid #ba993b !important;
-		border-left: 3px solid #ba993b !important;
-		border-bottom: 1px solid #ba993b !important;
+		border: 1px solid @black !important;
+		border-left: 3px solid @black !important;
+		border-bottom: 1px solid @gold !important;
 		border-radius: 3px 3px 0 0 !important;
 		margin-bottom: 2px !important;
 	}//.current_page_item a
@@ -405,7 +406,7 @@ blockquote{
 // ====================================
 
 #beneficios{
-	background-color: @brown;
+	background-color: @black;
 	color: @white;
 	overflow: hidden;
 	position: relative;
@@ -537,7 +538,7 @@ iframe {
 // ====================================
 
 #main-footer{
-	background-color: @gray;
+	background-color: @black;
 	display: table;
 	width: 100%;
 
@@ -551,6 +552,7 @@ iframe {
   			margin: 0;
 
   			a {
+  				font-size: 12px;
   				padding: 5px 10px;
   				color: white;
   				display: inline-block;
@@ -561,6 +563,7 @@ iframe {
 
 	.legales {
 		p {
+			font-size: 12px;
 			margin: 5px 0;
 			color: @white; 
 			text-align: right;
@@ -666,6 +669,7 @@ iframe {
 // ====================================
 #search {
 	.white;
+	padding: 50px 0;
 
 	header {
 		background-color: @gold;

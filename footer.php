@@ -6,7 +6,7 @@
 					</div><!--.col-sm-6-->
 					<div class="clearfix visible-xs"></div><!--.clearfic-->
 					<div class="col-sm-7 legales">
-						<p>&#169; BIENRENTAR 2015 Todos los Derechos Reservados. Sitio web desarrollado por <a href="#">NuevaWeb</a></p>
+						<p>&#169; BIENRENTAR 2015 Todos los Derechos Reservados. Sitio web desarrollado por <a href="http://www.nuevaweb.com.mx/">NuevaWeb</a></p>
 					</div><!--.legales-->
 				</div><!--.row-->
 			</div><!--.container-->
