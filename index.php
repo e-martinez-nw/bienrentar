@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 	
-	<div id="slider">
-		<?php nivo_slider( "index" ); ?>
-	</div><!--slider-->
+	<?php if(function_exists('putRevSlider')){
+        putRevSlider("index","homepage");
+	} ?>
 
 	<?php if(is_active_sidebar('cta-slider')): ?>
 		<div class="container visible-xs">
